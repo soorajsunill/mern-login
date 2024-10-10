@@ -28,7 +28,7 @@ const handleSubmit=(e) =>{
 
   }
 
-  axios.post("http://localhost:8000/addproducts",formData,{
+  axios.post("https://zudit3-tpsa.vercel.app/addproducts",formData,{
     headers: {
       'Content-Type' : 'multipart/form-data'
     }
