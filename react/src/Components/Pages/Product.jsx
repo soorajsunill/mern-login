@@ -15,7 +15,7 @@ const [products,setProducts]=useState([])
 const navigate =useNavigate()
 useEffect(()=>{
   axios 
-    .get("http://localhost:8000/products")
+    .get("https://zudit3-tpsa.vercel.app/products")
     .then((res)=>{
       setProducts(res.data.message)
     })
@@ -38,7 +38,7 @@ useEffect(()=>{
            <div className="col-md-4 mb-4" key={item._id}>
              <div className="card">
                <img
-                 src={`http://localhost:8000/images/product-images/${item._id}.jpeg`}
+                 src={`https://zudit3-tpsa.vercel.app/images/product-images/${item._id}.jpeg`}
                  alt="Product Image"
                  className="card-img-top"
                  style={{ height: "", objectFit: "cover" }} // Adjust image height and fit
