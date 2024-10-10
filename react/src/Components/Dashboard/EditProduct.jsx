@@ -17,7 +17,7 @@ function EditProduct() {
   // Fetch product details when the component mounts
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/products`)
+      .get(`https://zudit3-tpsa.vercel.app/products`)
       .then((res) => {
         setProduct(res.data); // Set the fetched product data
       })
@@ -52,7 +52,7 @@ function EditProduct() {
     }
 
     try {
-      await axios.put(`http://localhost:8000/editproduct/${id}`, formData, {
+      await axios.put(`https://zudit3-tpsa.vercel.app/editproduct/${id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data', // Set the header for file upload
         },
