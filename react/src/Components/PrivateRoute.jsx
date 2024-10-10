@@ -10,7 +10,7 @@ function PrivateRoute({children}) {
 
  useEffect(()=>{
   const checkAuth = ()=>{
-    axios.get("http://localhost:8000/checkAuth",{withCredentials: true})
+    axios.get("https://zudit3-tpsa.vercel.app/checkAuth",{withCredentials: true})
      .then((response)=>{
         console.log(response.data.authenticated);
         setIsAuthenticated(response.data.authenticated)
