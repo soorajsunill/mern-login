@@ -17,7 +17,7 @@ const navigate = useNavigate()
 useEffect(()=>{
   const fechUser = ()=>{
     axios.
-        get("http://localhost:8000/",{withCredentials:true})
+        get("https://zudit3-tpsa.vercel.app/",{withCredentials:true})
         .then((response)=>{
           setEmail(response.data.email);
           setLoading(false)
@@ -29,7 +29,7 @@ useEffect(()=>{
 
 function handleSignOut() {
   axios
-    .get("http://localhost:8000/logout", { withCredentials: true })
+    .get("https://zudit3-tpsa.vercel.app/logout", { withCredentials: true })
     .then((res) => {
       console.log(res);
       navigate("/admin-login");
