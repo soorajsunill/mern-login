@@ -35,7 +35,7 @@ const Home = () => {
   // const navigate =useNavigate()
   // useEffect(()=>{
   //   axios 
-  //     .get("http://localhost:8000/products")
+  //     .get("https://zudit3-tpsa.vercel.app/products")
   //     .then((res)=>{
   //       setProducts(res.data.message)
   //     })
