@@ -16,7 +16,7 @@ function Login() {
 
   function handleSubmit(e){
     e.preventDefault()
-    axios.post('http://localhost:8000/admin-login',{email,password},{withCredentials: true})
+    axios.post('https://zudit3-tpsa.vercel.app/admin-login',{email,password},{withCredentials: true})
     // .then((res)=>{
     //   console.log(res);
      
