@@ -9,7 +9,7 @@ const [products,setProducts]=useState([])
 const navigate =useNavigate()
 useEffect(()=>{
   axios 
-    .get("http://localhost:8000/products")
+    .get("https://zudit3-tpsa.vercel.app/products")
     .then((res)=>{
       setProducts(res.data.message)
     })
@@ -22,7 +22,7 @@ useEffect(()=>{
 const handleDelete =(id)=>{
   if(window.confirm("are you sure to delete the products")){
     axios
-    .delete(`http://localhost:8000/deleteproduct/${id}`)
+    .delete(`https://zudit3-tpsa.vercel.app/deleteproduct/${id}`)
     .then((res)=>{
       setProducts(products.filter(products => products._id !==id))
     })
@@ -59,7 +59,7 @@ const handleEdit = (id) => {
                     <td>{index+1}</td>
                     <td>
                       <img
-                          src={`http://localhost:8000/images/product-images/${item._id}.jpeg`} 
+                          src={`https://zudit3-tpsa.vercel.app/images/product-images/${item._id}.jpeg`} 
                           alt="Product Image"
                           style={{width:"50px", height: "50px"}}
                       />
