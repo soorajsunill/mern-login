@@ -16,7 +16,7 @@ const PORT =process.env.PORT
 
 const corsOptions = {
       origin:"https://zudit3-git-main-soorajsunills-projects.vercel.app",
-      method: "GET,POST,HEAD,PUT,PATCH,DELETE",
+      methods: "GET,POST,HEAD,PUT,PATCH,DELETE",
       credentials: true,
       allowedHeader: "Content-Type, Authorization"
 
@@ -30,7 +30,7 @@ app.use(cookieparser())
 app.use(session({
           secret: "secret",
           resave: false,
-          saveUninitialized:true,
+          saveUninitialized:false,
           cookie: {secure: false}
 }))
 
